@@ -29,15 +29,7 @@ const Navigation = () => {
             MEV
           </Link>
           
-          <div className="flex space-x-8 mx-auto">
-            <Link 
-              to="/"
-              className={`text-foreground hover:text-accent transition-smooth ${
-                location.pathname === '/' ? 'text-accent' : ''
-              }`}
-            >
-              Inicio
-            </Link>
+          <div className="absolute left-1/2 transform -translate-x-1/2 flex space-x-8">
             <Link 
               to="/proyectos"
               className={`text-foreground hover:text-accent transition-smooth ${

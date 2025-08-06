@@ -47,7 +47,7 @@
     --shadow-elegant: 0 4px 24px hsl(0 0% 0% / 0.08);
     --shadow-hover: 0 8px 32px hsl(0 0% 0% / 0.12);
     --transition-smooth: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
-    --font-display: 'Inter', system-ui, sans-serif;
+    --font-display: 'Space Grotesk', system-ui, sans-serif;
 
     --sidebar-background: 0 0% 98%;
 
@@ -111,6 +111,6 @@
   }
 
   body {
-    @apply bg-background text-foreground;
+    @apply bg-background text-foreground font-display;
   }
 }
