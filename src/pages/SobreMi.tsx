@@ -1,9 +1,13 @@
+import Navigation from "@/components/Navigation";
 import AboutSection from "@/components/AboutSection";
 
 const SobreMi = () => {
   return (
-    <div className="pt-20">
-      <AboutSection />
+    <div className="min-h-screen bg-background">
+      <Navigation />
+      <div className="pt-20">
+        <AboutSection />
+      </div>
     </div>
   );
 };
