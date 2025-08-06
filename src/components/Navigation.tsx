@@ -1,7 +1,9 @@
 import { useState, useEffect } from "react";
+import { Link, useLocation } from "react-router-dom";
 
 const Navigation = () => {
   const [isScrolled, setIsScrolled] = useState(false);
+  const location = useLocation();
 
   useEffect(() => {
     const handleScroll = () => {
@@ -12,13 +14,6 @@ const Navigation = () => {
     return () => window.removeEventListener('scroll', handleScroll);
   }, []);
 
-  const scrollToSection = (sectionId: string) => {
-    const section = document.getElementById(sectionId);
-    if (section) {
-      section.scrollIntoView({ behavior: 'smooth' });
-    }
-  };
-
   return (
     <nav className={`fixed top-0 left-0 right-0 z-50 transition-smooth ${
       isScrolled 
@@ -27,38 +22,46 @@ const Navigation = () => {
     }`}>
       <div className="max-w-7xl mx-auto px-6 py-4">
         <div className="flex justify-between items-center">
-          <button 
-            onClick={() => window.scrollTo({ top: 0, behavior: 'smooth' })}
+          <Link 
+            to="/"
             className="text-xl font-light tracking-wide text-foreground hover:text-accent transition-smooth font-display"
           >
             MEV
-          </button>
+          </Link>
           
-          <div className="hidden md:flex space-x-8">
-            <button 
-              onClick={() => window.scrollTo({ top: 0, behavior: 'smooth' })}
-              className="text-foreground hover:text-accent transition-smooth"
+          <div className="flex space-x-8 mx-auto">
+            <Link 
+              to="/"
+              className={`text-foreground hover:text-accent transition-smooth ${
+                location.pathname === '/' ? 'text-accent' : ''
+              }`}
             >
               Inicio
-            </button>
-            <button 
-              onClick={() => scrollToSection('projects')}
-              className="text-foreground hover:text-accent transition-smooth"
+            </Link>
+            <Link 
+              to="/proyectos"
+              className={`text-foreground hover:text-accent transition-smooth ${
+                location.pathname === '/proyectos' ? 'text-accent' : ''
+              }`}
             >
               Proyectos
-            </button>
-            <button 
-              onClick={() => scrollToSection('about')}
-              className="text-foreground hover:text-accent transition-smooth"
+            </Link>
+            <Link 
+              to="/sobre-mi"
+              className={`text-foreground hover:text-accent transition-smooth ${
+                location.pathname === '/sobre-mi' ? 'text-accent' : ''
+              }`}
             >
               Sobre Mí
-            </button>
-            <button 
-              onClick={() => scrollToSection('contact')}
-              className="text-foreground hover:text-accent transition-smooth"
+            </Link>
+            <Link 
+              to="/contacto"
+              className={`text-foreground hover:text-accent transition-smooth ${
+                location.pathname === '/contacto' ? 'text-accent' : ''
+              }`}
             >
               Contacto
-            </button>
+            </Link>
           </div>
         </div>
       </div>
