@@ -26,13 +26,13 @@ const Navigation = () => {
             to="/"
             className="text-xl font-light tracking-wide text-foreground hover:text-accent transition-smooth font-display"
           >
-            MEV
+            Inicio
           </Link>
           
           <div className="absolute left-1/2 transform -translate-x-1/2 flex space-x-8">
             <Link 
               to="/proyectos"
-              className={`text-foreground hover:text-accent transition-smooth ${
+              className={`text-xl font-light tracking-wide text-foreground hover:text-accent transition-smooth font-display ${
                 location.pathname === '/proyectos' ? 'text-accent' : ''
               }`}
             >
@@ -40,7 +40,7 @@ const Navigation = () => {
             </Link>
             <Link 
               to="/sobre-mi"
-              className={`text-foreground hover:text-accent transition-smooth ${
+              className={`text-xl font-light tracking-wide text-foreground hover:text-accent transition-smooth font-display ${
                 location.pathname === '/sobre-mi' ? 'text-accent' : ''
               }`}
             >
@@ -48,7 +48,7 @@ const Navigation = () => {
             </Link>
             <Link 
               to="/contacto"
-              className={`text-foreground hover:text-accent transition-smooth ${
+              className={`text-xl font-light tracking-wide text-foreground hover:text-accent transition-smooth font-display ${
                 location.pathname === '/contacto' ? 'text-accent' : ''
               }`}
             >

@@ -3,12 +3,21 @@
 @tailwind utilities;
 
 /* Design system for interior architecture portfolio */
+@font-face {
+  font-family: 'GoogleSansTextRegular';
+  src: url('/src/assets/fonts/GoogleSansTextRegular.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
 
 @layer base {
   :root {
     /* Sophisticated neutral palette */
-    --background: 0 0% 99%;
-    --foreground: 0 0% 8%;
+    /* fondo celeste */
+    --background: 206 14% 52%;
+    /* letras cafes */
+    --foreground: 27 62% 23%; 
+    --foreground: 0 0% 100%;
 
     --card: 0 0% 100%;
     --card-foreground: 0 0% 8%;
@@ -47,7 +56,7 @@
     --shadow-elegant: 0 4px 24px hsl(0 0% 0% / 0.08);
     --shadow-hover: 0 8px 32px hsl(0 0% 0% / 0.12);
     --transition-smooth: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
-    --font-display: 'Space Grotesk', system-ui, sans-serif;
+    --font-display: 'GoogleSansTextRegular', system-ui, sans-serif;
 
     --sidebar-background: 0 0% 98%;
 
@@ -112,5 +121,16 @@
 
   body {
     @apply bg-background text-foreground font-display;
+    overflow-x: hidden;
+  }
+
+  /* Ocultar scrollbar pero mantener funcionalidad */
+  ::-webkit-scrollbar {
+    display: none;
+  }
+  
+  html {
+    -ms-overflow-style: none;
+    scrollbar-width: none;
   }
 }

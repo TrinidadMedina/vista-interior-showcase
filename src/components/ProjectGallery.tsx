@@ -2,8 +2,8 @@ import project1 from "@/assets/project-1.jpg";
 import project2 from "@/assets/project-2.jpg";
 import project3 from "@/assets/project-3.jpg";
 import project4 from "@/assets/project-4.jpg";
-import project5 from "@/assets/project-5.jpg";
-import project6 from "@/assets/project-6.jpg";
+// import project5 from "@/assets/project-5.jpg";
+// import project6 from "@/assets/project-6.jpg";
 
 const projects = [
   {
@@ -34,20 +34,20 @@ const projects = [
     image: project4,
     description: "Spa privado con materiales de lujo y diseño funcional"
   },
-  {
-    id: 5,
-    title: "Oficina en Casa",
-    category: "Comercial",
-    image: project5,
-    description: "Espacio de trabajo inspirador con luz natural"
-  },
-  {
-    id: 6,
-    title: "Comedor Elegante",
-    category: "Residencial",
-    image: project6,
-    description: "Área social sofisticada para reuniones familiares"
-  }
+  // {
+  //   id: 5,
+  //   title: "Oficina en Casa",
+  //   category: "Comercial",
+  //   image: project5,
+  //   description: "Espacio de trabajo inspirador con luz natural"
+  // },
+  // {
+  //   id: 6,
+  //   title: "Comedor Elegante",
+  //   category: "Residencial",
+  //   image: project6,
+  //   description: "Área social sofisticada para reuniones familiares"
+  // }
 ];
 
 const ProjectGallery = () => {

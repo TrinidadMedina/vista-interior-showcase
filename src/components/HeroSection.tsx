@@ -13,11 +13,11 @@ const HeroSection = () => {
       <div className="max-w-4xl mx-auto text-center">
         <div className="mb-8">
           <h1 className="text-5xl md:text-7xl font-light tracking-tight text-foreground mb-6 font-display">
-            María Elena Vázquez
+            Maffei Works
           </h1>
           <div className="w-24 h-px bg-accent mx-auto mb-6"></div>
           <p className="text-xl md:text-2xl text-muted-foreground font-light tracking-wide">
-            Arquitecta Interiorista
+            Interiorismo
           </p>
         </div>
         
