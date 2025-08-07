@@ -6,25 +6,25 @@ const Home = () => {
   const [visibleImages, setVisibleImages] = useState<number[]>([]);
   
   const images = [
-    '/src/assets/image.png',
-    '/src/assets/image2.png',
-    '/src/assets/image3.png',
-    '/src/assets/image4.png',
-    '/src/assets/image5.png',
-    '/src/assets/image6.png',
-    '/src/assets/image7.png',
-    '/src/assets/image8.png',
-    '/src/assets/image9.png',
-    '/src/assets/image10.png',
-    '/src/assets/image11.png',
-    '/src/assets/image12.png',
-    '/src/assets/image13.png',
-    '/src/assets/image14.png',
-    '/src/assets/project-1.jpg',
-    '/src/assets/project-2.jpg',
-    '/src/assets/project-3.jpg',
-    '/src/assets/project-4.jpg'
-  ];
+    'image.png',
+    'image2.png',
+    'image3.png',
+    'image4.png',
+    'image5.png',
+    'image6.png',
+    'image7.png',
+    'image8.png',
+    'image9.png',
+    'image10.png',
+    'image11.png',
+    'image12.png',
+    'image13.png',
+    'image14.png',
+    'project-1.jpg',
+    'project-2.jpg',
+    'project-3.jpg',
+    'project-4.jpg'
+  ].map(img => new URL(`../assets/${img}`, import.meta.url).href);
 
   const imagePositions = [
     { left: '15%', top: '15%' },
